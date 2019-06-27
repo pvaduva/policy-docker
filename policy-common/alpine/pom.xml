@@ -77,12 +77,16 @@
                     <apiVersion>1.23</apiVersion>
                     <pullRegistry>${docker.pull.registry}</pullRegistry>
                     <pushRegistry>${docker.push.registry}</pushRegistry>
+                    <authConfig>
+                        <username>${docker.user}</username>
+                        <password>${docker.pass}</password>
+                    </authConfig>
                     <images>
                         <image>
-                            <name>onap/policy-common-alpine</name>
+                            <name>policy-common-alpine-${os.arch}</name>
                             <build>
                                 <cleanup>try</cleanup>
-                                <dockerFile>Dockerfile</dockerFile>
+                                <dockerFile>Dockerfile.${os.arch}</dockerFile>
                                 <tags>
                                     <tag>${project.version}</tag>
                                     <tag>${project.version}-${maven.build.timestamp}</tag>
