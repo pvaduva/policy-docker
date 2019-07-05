@@ -38,7 +38,7 @@
         <docker.skip.build>false</docker.skip.build>
         <docker.skip.push>false</docker.skip.push>
         <docker.pull.registry>docker.io</docker.pull.registry>
-        <docker.push.registry>docker.io/onapmulti</docker.push.registry>
+        <docker.push.registry>onapmulti</docker.push.registry>
         <docker.user>onapmulti</docker.user>
         <docker.pass>Secret1234</docker.pass>
         <maven.build.timestamp.format>yyyyMMdd'T'HHmm</maven.build.timestamp.format>

@@ -83,14 +83,12 @@
                     </authConfig>
                     <images>
                         <image>
-                            <name>policy-common-alpine-${os.arch}</name>
+                            <name>policy-common-alpine</name>
                             <build>
                                 <cleanup>try</cleanup>
                                 <dockerFile>Dockerfile.${os.arch}</dockerFile>
                                 <tags>
-                                    <tag>${project.version}</tag>
-                                    <tag>${project.version}-${maven.build.timestamp}</tag>
-                                    <tag>${project.docker.latesttag.version}</tag>
+                                    <tag>${os.arch}</tag>
                                 </tags>
                                 <args>
                                     <BUILD_VERSION>${docker.build.version}</BUILD_VERSION>
